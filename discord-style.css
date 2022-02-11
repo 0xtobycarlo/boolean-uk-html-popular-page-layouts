@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --border-styling: 2px solid #333333;
+    --color-1: rgb(121, 201, 228);
+    --color-2: rgb(187, 12, 12);
+    --color-3: rgb(15, 233, 26);
+    --color-4: rgb(190, 185, 186);
+    --color-5: rgb(119, 118, 116);
+
+    --item-gap: 1em;
+  }
+  
+  .nav {
+    border: var(--border-styling);
+    background-color: var(--color-1);
+  }
+  
+  .icons {
+    border: var(--border-styling);
+    background-color: var(--color-2);
+  }
+  
+  .features {
+    border: var(--border-styling);
+    background-color: var(--color-3);
+  }
+  
+  .messages {
+    border: var(--border-styling);
+    background-color: var(--color-4);
+  }
+  
+  .friends {
+    border: var(--border-styling);
+    background-color: var(--color-5);
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr 2.2fr 0.8fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    height: 100vh;
+    grid-template-areas:
+      "nav nav nav nav"
+      "icons features messages friends";
+  }
+  
+  .nav {
+    grid-area: nav;
+  }
+  
+  .icons {
+    grid-area: icons;
+  }
+  
+  .features {
+    grid-area: features;
+  }
+  
+  .messages {
+    grid-area: messages;
+  }
+  
+  .friends {
+    grid-area: friends;
+  }

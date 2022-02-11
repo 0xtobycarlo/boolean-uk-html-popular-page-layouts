@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "header" 1fr
+    "main" 11fr /
+    1fr;
+}
+
+header {
+  grid-area: header;
+  background-color: white;
+}
+
+main {
+  grid-area: main;
+
+  width: 100vw;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  background-color: rgb(222, 226, 205);
+}
+
+.main-container {
+  width: 70%;
+  height: 90%;
+  display: grid;
+  grid-template:
+    "left-bar center right-bar" 1fr /
+    1fr 3fr 2fr;
+}
+
+.left-bar {
+  grid-area: left-bar;
+
+  display: grid;
+  grid-template:
+    "profile" 2fr
+    "visitor-analytics" 1fr
+    "events" 2fr /
+    1fr;
+}
+
+.profile {
+  grid-area: profile;
+}
+
+.visitor-analytics {
+  grid-area: visitor-analytics;
+}
+
+.events {
+  grid-area: events;
+}
+
+.profile,
+.visitor-analytics,
+.events {
+  background-color: pink;
+  margin: 5px;
+}
+
+.center {
+  grid-area: center;
+
+  display: grid;
+  grid-template:
+    "post" 1fr
+    "feed" 4fr /
+    1fr;
+}
+
+.post {
+  grid-area: post;
+}
+
+.feed {
+  grid-area: feed;
+}
+
+.post,
+.feed {
+  background-color: blue;
+  margin: 5px;
+}
+
+.right-bar {
+  grid-area: right-bar;
+
+  display: grid;
+  grid-template:
+    "news" 2fr
+    "courses" 1fr
+    "follow" 2fr /
+    1fr;
+}
+
+.news {
+  grid-area: news;
+}
+
+.courses {
+  grid-area: courses;
+}
+
+.follow {
+  grid-area: follow;
+}
+
+.news,
+.courses,
+.follow {
+  background-color: yellow;
+  margin: 5px;
+}
+
+.bg-main {
+  background-color: rgb(222, 226, 205);
+}
